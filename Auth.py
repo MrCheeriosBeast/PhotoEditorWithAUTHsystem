@@ -10,9 +10,9 @@ class LoginWindow:
         self.master.geometry("300x150")
 
         # Twilio credentials
-        self.twilio_account_sid = "AC0bda0c677d12e29647e2f8754cbb7eaa"
-        self.twilio_auth_token = "f56d52ddf1dd52e09d423a50edce6c61"
-        self.twilio_phone_number = "+1 6592448997"
+        self.twilio_account_sid = "Keep_Twilio_Account_SID here"
+        self.twilio_auth_token = "Keep_Twilio_AUTH_Token here"
+        self.twilio_phone_number = "Keep the Phone number you bought on Twilio here."
 
         self.initialize_login()
 
@@ -37,8 +37,8 @@ class LoginWindow:
         password = self.entry_password.get()
 
         # Replace with your actual username and password
-        correct_username = "Charan Raavi"
-        correct_password = "charanisthebest"
+        correct_username = "Keep your Desired username"
+        correct_password = "Keep Your desired Password"
 
         if username == correct_username and password == correct_password:
             self.send_verification_sms()
@@ -53,7 +53,7 @@ class LoginWindow:
         client = Client(self.twilio_account_sid, self.twilio_auth_token)
 
         # Replace with the phone number where you want to receive the SMS
-        to_phone_number = "+91 9697592592"
+        to_phone_number = "Keep The Phone number where you want the SMS To go to."
 
         message = client.messages.create(
             to=to_phone_number,
